@@ -1,5 +1,8 @@
 import { Route, Routes} from 'react-router-dom'
-import './App.css';
+// import './App.css';
+import style from './app.module.css';
+import classNames from 'classnames/bind'
+const cs = classNames.bind(style);
 
 function App() {
 
@@ -14,6 +17,7 @@ function App() {
       {/* <Main></Main> */}
         <Routes>
           <Route path='/' element={<Main/>} />
+          <Route path='/test' element={<S1/>} />
         </Routes>
 
     </div>
@@ -35,7 +39,7 @@ function S1() {
   return (
     <>
 
-      <div className='s1'>
+      <div className={cs('s1')}>
         S1
       </div>
 
